@@ -183,6 +183,31 @@ export default function Home() {
               </ul>
             )}
           </section>
+
+          <section className="space-y-3 rounded-md border border-slate-200 bg-slate-50 p-4">
+            <h2 className="text-lg font-semibold text-slate-900">Observability Links</h2>
+            <p className="text-sm text-slate-700">
+              Grafana dashboard:{' '}
+              <a
+                href="http://localhost:3100"
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-blue-700 underline"
+              >
+                http://localhost:3100
+              </a>
+            </p>
+            <p className="text-sm text-slate-700">
+              Loki query example:{' '}
+              <code className="rounded bg-slate-200 px-1 py-0.5">{'{app="signal-lab"}'}</code>
+            </p>
+            <p className="text-sm text-slate-700">
+              Sentry note: set <code className="rounded bg-slate-200 px-1 py-0.5">SENTRY_DSN</code>{' '}
+              in backend env to enable external exception reporting for
+              <code className="ml-1 rounded bg-slate-200 px-1 py-0.5">system_error</code>
+              scenarios.
+            </p>
+          </section>
         </CardContent>
       </Card>
     </main>
