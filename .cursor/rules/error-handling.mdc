@@ -1,0 +1,13 @@
+---
+description: Unified error-handling guidance across backend and frontend
+globs: apps/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Error Handling
+
+- Never swallow exceptions silently.
+- Backend: map known errors to explicit HTTP exceptions; keep unknowns as internal errors.
+- Frontend: surface user-safe messages and keep technical details in logs/observability tooling.
+- Preserve useful context in error payloads/logs (`type`, `id`, `duration`, `message`).
+- Keep error responses consistent with global exception filter output shape.

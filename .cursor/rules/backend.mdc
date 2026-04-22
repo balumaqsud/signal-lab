@@ -1,0 +1,14 @@
+---
+description: NestJS backend architecture and implementation patterns
+globs: apps/backend/src/**/*.ts
+alwaysApply: false
+---
+
+# Backend Conventions
+
+- Keep controllers thin: validate input, delegate business logic to services.
+- Put business logic in services; keep data access centralized and explicit.
+- Use DTOs with `class-validator` and `@nestjs/swagger` metadata.
+- Use dependency injection for cross-cutting concerns (metrics, logging, integrations).
+- Keep endpoints consistent with existing response patterns and global filters.
+- Prefer clear scenario-specific exceptions (`BadRequestException`, `InternalServerErrorException`).

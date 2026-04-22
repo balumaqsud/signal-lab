@@ -1,0 +1,14 @@
+---
+description: Frontend patterns for TanStack Query, RHF, and shadcn-style UI
+globs: apps/frontend/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Frontend Conventions
+
+- Use TanStack Query for async server state (`useQuery`, `useMutation`, query invalidation).
+- Use React Hook Form for forms and validation wiring.
+- Prefer shadcn-style primitives from `components/ui` for buttons, cards, and inputs.
+- Keep `fetch` helpers typed and colocated with page/component usage unless shared broadly.
+- Show explicit loading, success, and error UI states for all mutations and queries.
+- Favor small helper functions for display logic (badges, formatting, status mapping).

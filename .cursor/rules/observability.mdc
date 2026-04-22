@@ -1,0 +1,16 @@
+---
+description: Observability requirements for metrics, logs, and Sentry events
+globs: apps/backend/src/**/*.ts
+alwaysApply: false
+---
+
+# Observability Rules
+
+- New backend flows should emit:
+  - metrics (counter + timing where applicable),
+  - structured logs,
+  - error reporting path for failures.
+- Metrics should use stable names and labels; avoid high-cardinality labels.
+- Logs should be JSON-structured and include request/scenario identifiers when available.
+- For simulated or real system failures, capture exception in Sentry when DSN is configured.
+- For validation paths, add breadcrumb-level telemetry when it helps incident triage.

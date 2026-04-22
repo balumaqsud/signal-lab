@@ -1,0 +1,13 @@
+---
+description: Allowed project stack and baseline architecture constraints
+alwaysApply: true
+---
+
+# Stack Constraints
+
+- Use only project-approved stack: Next.js frontend, NestJS backend, Prisma + PostgreSQL, Docker Compose local runtime.
+- Keep TypeScript-first implementations; avoid introducing plain JavaScript where TypeScript exists.
+- Reuse existing libs before adding new dependencies.
+- Keep API paths under `/api` unless explicitly documented otherwise (for example `/metrics`).
+- Preserve local-first developer workflow (`docker compose up -d`).
+- Document new infrastructure services in `README.md` when user-facing.

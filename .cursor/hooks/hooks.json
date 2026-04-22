@@ -1,0 +1,14 @@
+{
+  "hooks": [
+    {
+      "name": "after-endpoint",
+      "trigger": "after-endpoint",
+      "action": "Run observability checklist: verify metric emission, structured logs, and error capture path (Sentry/breadcrumb where applicable)."
+    },
+    {
+      "name": "after-schema-change",
+      "trigger": "after-schema-change",
+      "action": "Remind to create/apply Prisma migration, run prisma generate, and verify backend startup against updated schema."
+    }
+  ]
+}
